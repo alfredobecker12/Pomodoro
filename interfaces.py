@@ -3,7 +3,7 @@ import PySimpleGUI as sg
 """
 abaixo, o layout define como será a janela em que esse será aplicado.
 A estruturação das janelas se baseam em rows(linhas).
-No layout acima, cada linha representa uma área horizontal da janela que será aberta.
+Nos layouts abaixos, cada linha representa uma área horizontal da janela que será aberta.
 
 Pelo motivo de sempre que as telas são fechadas elas precisam ser abertas novamente, são criadas dentro de uma função.
 Dessa forma, é só criar a window toda vez que for usar no fluxo principal.
@@ -49,7 +49,7 @@ def register_success_interface():
 
 def forgot_password_interface():
     forgot_pass_layout = [[sg.Text('Informe o username que uma mensagem será enviada ao email cadastrado.')],
-                          [sg.Input(default_text='Email')],
+                          [sg.Text('Username'),sg.Input()],
                           [sg.Submit(button_text='Enviar')]]
 
     return sg.Window(title='Forgot pass page', size=(500,150), element_justification='center', grab_anywhere=True, element_padding=(5,5), layout=forgot_pass_layout)
@@ -59,7 +59,7 @@ def forgot_password_success_interface():
     success_forgot_pass_layout = [[sg.Text('Uma mensagem foi enviada ao email registrado!')],
                                   [sg.Submit(button_text='Voltar')]]
 
-    return sg.Window(title='Success forgot pass page', size=(300,200), element_justification='center', grab_anywhere=True, element_padding=(5,25), layout=success_forgot_pass_layout)
+    return sg.Window(title='Success forgot pass page', size=(330,200), element_justification='center', grab_anywhere=True, element_padding=(5,25), layout=success_forgot_pass_layout)
 
 
 def menu_interface():
@@ -99,8 +99,4 @@ def pomodoro_break_interface(time):
 
 
 if __name__=='__main__':
-    register = username_suggestion(['dfdd', 'ddd', 'sair'])
-    
-    event, values = register.read()
-    print(event)
-    print(values)
+    pass

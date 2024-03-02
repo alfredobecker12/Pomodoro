@@ -86,7 +86,7 @@ def get_email(username):
                 email_curs.execute(sql_query, (username,))
                 email = email_curs.fetchone()[0]
 
-                if email is None:
+                if email == None:
                     """Verifica se o email foi encontrado."""
                     return 
                 
@@ -98,5 +98,5 @@ def get_email(username):
 
 
 if __name__ == '__main__':
-    mail = get_email('windowsvista')
-    print(mail)
+    get_email('windowsvista60')
+    

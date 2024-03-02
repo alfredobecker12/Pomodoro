@@ -53,21 +53,24 @@ def user_check(username):
                 suggestions.append(suggestion)
         suggestions.append('Nenhum')
 
-        username_suggestion = username_suggestion_interface(suggestions)
-        username_suggestion_event, values = username_suggestion.read()
+        username_suggestion_window = username_suggestion_interface(suggestions)
+        username_suggestion_event, values = username_suggestion_window.read()
 
         if username_suggestion_event == 'Ok':
             if values[0] == suggestions[3]:
+                username_suggestion_window.close()
                 return False
             
             else:
+                username_suggestion_window.close()
                 return values[0]
 
         elif username_suggestion_event == sg.WIN_CLOSED:
+            username_suggestion_window.close()
             return False
 
     else:
         return True
     
 if __name__ == '__main__':
-    user_check('mano11')
+    pass
