@@ -98,5 +98,5 @@ def get_email(username):
 
 
 if __name__ == '__main__':
-    get_email('windowsvista60')
+    pass
     

@@ -105,4 +105,4 @@ def time_formatter(time):
 
 
 if __name__ == '__main__':
-    running(5)
+    pass
